@@ -27,6 +27,13 @@ To access the app open your browser and type `localhost:8080` on the URL or run 
 curl localhost:8080
 ```
 
+![Alt text](image.png)
+
+Stop container by running:
+```
+docker stop outyet
+```
+
 ## Deployment
 
 GitHub workflow builds and pushes an image to GitHub packages after pushing a new repository tag
