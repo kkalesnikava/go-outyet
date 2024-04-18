@@ -2,9 +2,9 @@
 
 > Inspired by: https://github.com/golang/example/blob/master/outyet/main.go
 
-A sample Go app which answers to the question: "Is Go 1.22.0 out yet?"
+A sample Go app which answers the question: "Is Go 1.22.0 out yet?"
 
-## How to run it locally
+## How to test it locally
 
 Checkout the repo, switch to the repository root and run the following command to build an image:
 
@@ -22,7 +22,7 @@ Check container logs if the app is running:
 docker logs outyet
 ```
 
-To access the app open your browser and type `localhost:8080` on the URL or run curl command on your terminal:
+To access the app open your browser and type `http://localhost:8080` on the URL or run curl command on your terminal:
 ```
 curl localhost:8080
 ```
@@ -33,7 +33,25 @@ Stop container by running:
 ```
 docker stop outyet
 ```
+## GHA workflow
+GitHub workflow builds and pushes an image to GitHub packages after pushing a new repository tag
 
 ## Deployment
+> Source: https://skaffold.dev/docs/quickstart/#use-skaffold-for-continuous-development
 
-GitHub workflow builds and pushes an image to GitHub packages after pushing a new repository tag
+Start minikube:
+```
+minikube start --profile custom
+skaffold config set --global local-cluster true
+eval $(minikube -p custom docker-env)
+```
+
+Run the following command to use Skaffold for continuous development:
+```
+skaffold dev
+```
+Run on the terminal:
+```
+minikube tunnel -p custom
+```
+Open your browser at `http://localhost:8080` and browse the app webpage
