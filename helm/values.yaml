@@ -1,0 +1,15 @@
+# Default values for app.
+namespace: app
+
+# Deployment variables
+replicaCount: 2
+
+image:
+  repository: ghcr.io/kkoles/go-outyet
+  pullPolicy: Always
+  tag: v1.1.0
+
+# Service 
+service:
+  type: LoadBalancer
+  port: 8080
