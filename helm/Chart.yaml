@@ -1,13 +1,13 @@
 apiVersion: v2
 
 type: application
-appVersion: 1.1.0
-description: outyet helm charts
-name: outyet
-
 version: 1.0.0
+name: outyet
+description: outyet helm charts
 kubeVersion: ">=1.24.0-0"
 home: https://github.com/kkoles/go-outyet
+
+appVersion: 1.1.0
 
 sources:
   - https://github.com/kkoles/go-outyet
