@@ -1,8 +1,8 @@
 # go-outyet
 
-> Source: https://github.com/golang/example/blob/master/outyet/main.go
+> Inspired by: https://github.com/golang/example/blob/master/outyet/main.go
 
-A sample Go app which answers to the question: "Is Go 1.4 out yet?"
+A sample Go app which answers to the question: "Is Go 1.22.0 out yet?"
 
 ## How to run it locally
 
