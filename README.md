@@ -45,7 +45,7 @@ Open infrastructure folder and update:
 - `outyet` values to change ingress hosts from `example.example.com` to your own domain
 - `cluster-issuer` acme email address from `user@example.com` to your own email
 
-
+### Setup
 Start minikube:
 ```
 minikube start --profile custom
